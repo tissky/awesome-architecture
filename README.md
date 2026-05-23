@@ -1,0 +1,120 @@
+# Awesome Architecture · 架构图谱
+
+> An open-source knowledge base about **architecture** — not code.
+> Battle-tested architecture maps of real, popular systems, paired with a tutorial that trains you to think like an architect.
+
+**English** · [简体中文](./README.zh-CN.md)
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+[![Focus: architecture, not syntax](https://img.shields.io/badge/focus-architecture%2C%20not%20syntax-blue.svg)](#why-this-repo-exists)
+[![Made with Markdown](https://img.shields.io/badge/made%20with-Markdown-1f425f.svg)](#)
+
+---
+
+## Why this repo exists
+
+For the past two decades, a programmer's core edge was **writing code correctly and fast**.
+
+But something is shifting: **writing code itself is becoming cheap**. AI generates functions, completes boilerplate, translates between languages, fixes syntax. Knowing one concrete detail — `for` vs `map`, this Postgres syntax vs that MySQL one — is depreciating fast.
+
+What *isn't* depreciating — and is in fact getting more valuable — is a different skill:
+
+> **Before you write the first line of code, figure out what the system should actually look like.**
+>
+> Where does data come from, where does it go? What must be strongly consistent, what can be eventual?
+> Where will it break first? When users grow from 10K to 100M, what's the first bottleneck?
+> To get A, which B am I willing to give up?
+
+That is **architectural thinking**. It's independent of language, of framework, even of what's trendy this year. It's the judgment to **read the map before you hit the road**.
+
+**Our belief: the great developer of the future is first a person who makes sound architectural judgments, and only second a person who writes code.** Understand what you're building at the architecture level first — code is just one way to make that understanding real.
+
+---
+
+## What's inside
+
+```
+awesome-architecture/
+├── tutorial/      📚 Tutorial  — systematically teaches you how to *think like an architect*
+└── templates/     🗺️ Templates — architecture maps of real systems; architecture only, no syntax
+```
+
+### 📚 tutorial/ — Become a sharper architect
+
+Not "how to use framework X", but a transferable way of thinking: how to turn a vague requirement into constraints, how to make decisions under trade-offs, how to draw architecture diagrams that actually communicate, and how to design a brand-new system from scratch.
+
+| Ch. | Topic | What you'll learn |
+|---|---|---|
+| [01](tutorial/01-为什么先有架构思维.md) | Why architecture-first thinking | Why "architecture first" is *the* core skill of this era |
+| [02](tutorial/02-架构师的思考框架.md) | The architect's thinking framework | The universal flow: requirements → constraints → quality attributes → trade-offs |
+| [03](tutorial/03-读懂与画好架构图.md) | Reading & drawing architecture diagrams | Use the C4 model to get the system out of your head and onto paper |
+| [04](tutorial/04-十大核心架构模式.md) | 10 core architecture patterns | Layered, microservices, event-driven, CQRS… what each one actually solves |
+| [05](tutorial/05-数据与状态.md) | Data & state | Why *data* is the real hard part of any system |
+| [06](tutorial/06-质量属性与取舍.md) | Quality attributes & trade-offs | Performance / availability / consistency / cost — how to weigh them |
+| [07](tutorial/07-从0到1设计一个系统.md) | Designing a system from 0 to 1 | A step-by-step methodology you can actually follow |
+| [08](tutorial/08-架构决策记录与演进.md) | ADRs & evolution | Record decisions with ADRs and let architecture grow with the business |
+
+> 👉 **New here? Start with [tutorial/README.md](tutorial/README.md)** for the full learning path.
+
+### 🗺️ templates/ — Architecture maps of real systems
+
+Each template is an "architecture map". We **deliberately avoid discussing language or framework** — only: what problem this class of system solves, what parts it's made of, how data flows, how the key trade-offs are made, and where it dies at scale.
+
+| Template | Representative products | Key architecture themes |
+|---|---|---|
+| [AI Chat Product](templates/ai-chat-product/README.md) | Claude, ChatGPT | LLM inference, streaming, context management, RAG, cost control |
+| [Browser Extension](templates/browser-extension/README.md) | Honey, Grammarly | Content/background split, page injection, privacy boundaries, monetization |
+| [Standard Web App](templates/standard-web-app/README.md) | Corporate sites, blogs, SaaS dashboards | Classic three-tier, caching, read/write splitting — "good enough" |
+| [Mobile App](templates/mobile-app/README.md) | Most iOS/Android apps | Offline-first, data sync, client state, push |
+| [E-commerce Platform](templates/ecommerce-platform/README.md) | Amazon, Shopify, Taobao | Inventory, orders, payments, overselling, traffic spikes |
+| [Social Feed](templates/social-feed/README.md) | Twitter/X, Instagram | Feed push/pull, follow graph, viral fan-out |
+| [Video Streaming](templates/video-streaming/README.md) | Netflix, YouTube | Transcoding, CDN, adaptive bitrate, recommendations |
+| [Realtime Chat](templates/realtime-chat/README.md) | WhatsApp, Slack, WeChat | Long-lived connections, message ordering, offline delivery, group fan-out |
+
+> 👉 **Want to add your own template?** Follow the unified format in [templates/_TEMPLATE.md](templates/_TEMPLATE.md).
+
+> 📝 **Note:** the tutorial and template content is currently written in **Chinese**. English translations are very welcome — see [Contributing](#contributing).
+
+---
+
+## How to use this repo
+
+**If you're a beginner / shifting toward architectural thinking:**
+Read `tutorial/` in order. After each chapter, pick a system in `templates/` you find interesting and try to "read" it using the framework you just learned.
+
+**If you're about to design a new system:**
+Start with `tutorial/07` for the methodology, then find the map closest to your scenario in `templates/`. Treat it as a starting point, not an answer — walk through its "key decisions" and "common pitfalls" and ask yourself each one.
+
+**If you're prepping for system design interviews:**
+Every template covers high-frequency topics (overselling, feed fan-out, message ordering, streaming output…), all in a consistent format — great for systematic review.
+
+**If you're a senior engineer / architect:**
+Jump straight to each template's "Key Decisions & Trade-offs" and "Evolution Path" — the most concentrated parts. PRs sharing the scars you've earned are welcome.
+
+---
+
+## Three reading principles
+
+1. **Ask "why" before "how".** Every architecture choice sits on top of a constraint or a trade-off. If you can't see the trade-off, you haven't understood it.
+2. **There is no best architecture, only the most fitting one.** "Chat" for an internal tool and "chat" for WeChat are worlds apart. Scale, team, cost, and compliance decide everything.
+3. **Architecture grows.** Don't force a mature-stage architecture onto an MVP. Every template includes an "evolution path" telling you when to upgrade — and when you're over-engineering.
+
+---
+
+## The one-sentence version
+
+> **Code tells the computer what to do; architecture decides whether the thing is worth doing, can be done, and will hold up.**
+> This repo trains you for the second kind of judgment.
+
+---
+
+## Contributing
+
+Contributions are welcome — new templates, fixes, and especially **English translations** of the tutorial and existing templates.
+
+1. Copy [`templates/_TEMPLATE.md`](templates/_TEMPLATE.md) into a new folder, e.g. `templates/your-system/README.md`.
+2. Fill in all 13 sections and **stay strictly at the architecture level** — the moment you start writing "use library YY in language XX", stop and ask: is this an architecture decision, or an implementation detail?
+3. Draw diagrams in ASCII (plain text, viewable everywhere, never breaks).
+4. Add a row to the template list.
+
+> The bar: an engineer who has never touched this domain can, after reading your template, explain "why this class of system is designed this way, and where it dies".
