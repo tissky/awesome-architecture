@@ -15,7 +15,7 @@
 
 For the past two decades, a programmer's core edge was **writing code correctly and fast**.
 
-But something is shifting: **writing code itself is becoming cheap**. AI generates functions, completes boilerplate, translates between languages, fixes syntax. Knowing one concrete detail — `for` vs `map`, this Postgres syntax vs that MySQL one — is depreciating fast.
+But something is happening, and faster than most are willing to admit: **"writing code" as a scarce skill is ending.** This isn't hyperbole — at frontier labs like OpenAI and Anthropic, the vast majority of code is already written by AI, and engineers no longer type out implementations line by line. They've moved upstream: **deciding what the AI should build, then judging whether it got it right.** Once a machine produces working code in seconds, knowing "`for` vs `map`, this API, that syntax" stops being a moat almost overnight.
 
 What *isn't* depreciating — and is in fact getting more valuable — is a different skill:
 
