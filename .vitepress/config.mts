@@ -102,8 +102,25 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
+          { text: 'Tutorial', link: '/en/tutorial/README' },
           { text: 'GitHub', link: 'https://github.com/study8677/awesome-architecture' },
         ],
+        sidebar: {
+          '/en/': [
+            {
+              text: '📚 Tutorial',
+              items: [
+                { text: 'Overview', link: '/en/tutorial/README' },
+                { text: '01 · Why architecture comes first', link: '/en/tutorial/01-为什么先有架构思维' },
+                { text: '02–08 · translation in progress…', link: '/en/tutorial/README' },
+              ],
+            },
+          ],
+        },
+        outline: { label: 'On this page', level: [2, 3] },
+        docFooter: { prev: 'Previous', next: 'Next' },
+        returnToTopLabel: 'Back to top',
+        langMenuLabel: 'Change language',
       },
     },
   },
