@@ -7,6 +7,10 @@
 
 ## 模板清单
 
+> 共 **21** 个模板:16 个经典 / 通用系统 + 5 个 AI 原生系统(LLM 时代新增)。每个模板都附**真实开源项目 / 工程文档链接**(见各模板末尾「参考原型与延伸阅读」)。
+
+### 经典 / 通用系统
+
 | 模板 | 代表产品 | 一句话定位 | 核心看点 |
 |---|---|---|---|
 | [AI 对话产品](ai-chat-product/README.md) | Claude、ChatGPT | 把大模型包装成可对话、可流式、可联网的产品 | 推理服务、流式、上下文、RAG、成本 |
@@ -17,15 +21,33 @@
 | [社交信息流](social-feed/README.md) | Twitter/X、Instagram | 把海量内容按关系/兴趣排好送到每个人眼前 | Feed 推拉、关注图、热点扩散 |
 | [视频流媒体](video-streaming/README.md) | Netflix、YouTube | 把大文件以最低延迟、最省带宽送达全球 | 转码、CDN、自适应码率、推荐 |
 | [实时通讯](realtime-chat/README.md) | WhatsApp、Slack、微信 | 让消息又快又不丢又有序地到达 | 长连接、时序、离线投递、群扩散 |
+| [短链接服务](url-shortener/README.md) | Bitly、TinyURL、t.co | 把长链接压成可分发可追踪的短码并极速重定向 | 读多写少、缓存、301/302、唯一 ID |
+| [支付系统](payment-system/README.md) | Stripe、支付宝、PayPal | 在不确定世界里把账算到分毫不差 | 幂等、复式记账、对账、状态机 |
+| [搜索引擎](search-engine/README.md) | Google、Elasticsearch | 用倒排索引让关键词毫秒级命中并排序 | 倒排索引、相关性、召回+精排、分片 |
+| [网约车 / 出行](ride-hailing/README.md) | Uber、滴滴 | 在活地图上秒级撮合海量司机与乘客 | 地理空间索引、实时位置、供需匹配 |
+| [实时协同文档](collaborative-doc/README.md) | Google Docs、Figma | 多人同时编辑、实时合并、互不覆盖 | OT/CRDT、单 writer 串行、操作日志 |
+| [云存储 / 网盘](cloud-storage/README.md) | Dropbox、iCloud | 文件不丢、多设备同步、少占空间 | 分块、内容寻址去重、增量同步 |
+| [通知 / 推送系统](notification-system/README.md) | Novu、FCM/APNs | 把「发生了什么」克制可靠地送达对的人 | 多渠道扇出、去重限频、异步重试 |
+| [在线票务 / 抢票](online-ticketing/README.md) | Ticketmaster、大麦、12306 | 海量瞬时争抢有限座位还不超卖 | 虚拟等候室、原子扣减、锁座超时 |
+
+### 🤖 AI 原生系统(LLM 时代新增)
+
+| 模板 | 代表产品 / 原型 | 一句话定位 | 核心看点 |
+|---|---|---|---|
+| [AI 中转站 / 网关](ai-gateway/README.md) | One API、LiteLLM、Portkey | 用统一入口接入所有大模型并集中治理 | 统一接口、计费限流、负载均衡、缓存 |
+| [RAG 知识库](rag-knowledge-base/README.md) | RAGFlow、LlamaIndex、Dify | 让模型「开卷考试」、基于你的资料作答 | 切块、向量检索、混合检索+重排、引用 |
+| [AI Agent / 工作流](ai-agent-platform/README.md) | Dify、Coze、LangGraph | 让模型规划→调工具→观察→再决策 | 行动循环、工具沙箱、记忆、可控兜底 |
+| [模型推理服务](inference-serving/README.md) | vLLM、SGLang、Triton | 在 GPU 上把模型榨到最高吞吐 | 连续批处理、分页 KV、量化、多副本 |
+| [向量数据库](vector-database/README.md) | Milvus、Qdrant、pgvector | 海量高维向量的毫秒级相似检索 | ANN、HNSW/IVF、召回-延迟权衡 |
 
 ---
 
-## 每个模板都长一样:统一的 13 段结构
+## 每个模板都长一样:统一的 14 段结构
 
 我们刻意让所有模板遵循**同一套结构**(见 [`_TEMPLATE.md`](_TEMPLATE.md))。这样做有两个好处:
 
 1. **越读越快**:你第一次读要从头看,第十次读就能直接跳到「关键决策」那一节。
-2. **结构本身就是教学**:这 13 段,正好就是你设计任何系统时该依次问自己的 13 类问题。
+2. **结构本身就是教学**:这 14 段,正好就是你设计任何系统时该依次问自己的 14 类问题。
 
 | # | 段落 | 它在回答什么问题 |
 |---|---|---|
@@ -42,6 +64,7 @@
 | 11 | 常见误区 / 反模式 | 新手最容易在哪里把它做错? |
 | 12 | 演进路线 | MVP→成长期→成熟期,每阶段架构长什么样? |
 | 13 | 可复用要点 | 哪些思想能搬到别的系统上? |
+| 14 | 参考原型与延伸阅读 | 它的真实原型是哪些开源项目 / 公开文档? |
 
 ---
 
@@ -64,7 +87,7 @@
 ## 想贡献一个新模板?
 
 1. 复制 [`_TEMPLATE.md`](_TEMPLATE.md) 到一个新目录,比如 `templates/your-system/README.md`。
-2. 把 13 段逐一填满,**坚持只讲架构**——一旦你开始写「用 XX 语言的 YY 库」,就停下来问自己:这是架构决策,还是实现细节?
+2. 把 14 段逐一填满(含给出**真实**的参考原型链接),**坚持只讲架构**——一旦你开始写「用 XX 语言的 YY 库」,就停下来问自己:这是架构决策,还是实现细节?
 3. 图用 ASCII 画(纯文本、到处都能看、永不失效)。
 4. 在上面的清单表格里加一行。
 

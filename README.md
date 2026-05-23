@@ -60,6 +60,8 @@ Not "how to use framework X", but a transferable way of thinking: how to turn a 
 
 Each template is an "architecture map". We **deliberately avoid discussing language or framework** — only: what problem this class of system solves, what parts it's made of, how data flows, how the key trade-offs are made, and where it dies at scale.
 
+**Classic / general systems**
+
 | Template | Representative products | Key architecture themes |
 |---|---|---|
 | [AI Chat Product](templates/ai-chat-product/README.md) | Claude, ChatGPT | LLM inference, streaming, context management, RAG, cost control |
@@ -70,6 +72,24 @@ Each template is an "architecture map". We **deliberately avoid discussing langu
 | [Social Feed](templates/social-feed/README.md) | Twitter/X, Instagram | Feed push/pull, follow graph, viral fan-out |
 | [Video Streaming](templates/video-streaming/README.md) | Netflix, YouTube | Transcoding, CDN, adaptive bitrate, recommendations |
 | [Realtime Chat](templates/realtime-chat/README.md) | WhatsApp, Slack, WeChat | Long-lived connections, message ordering, offline delivery, group fan-out |
+| [URL Shortener](templates/url-shortener/README.md) | Bitly, TinyURL, t.co | Read-heavy, caching, 301/302, distributed unique IDs |
+| [Payment System](templates/payment-system/README.md) | Stripe, Alipay, PayPal | Idempotency, double-entry ledger, reconciliation, state machine |
+| [Search Engine](templates/search-engine/README.md) | Google, Elasticsearch | Inverted index, relevance ranking, recall + rerank, sharding |
+| [Ride-Hailing](templates/ride-hailing/README.md) | Uber, Lyft, DiDi | Geospatial index, real-time location, supply–demand matching |
+| [Collaborative Doc](templates/collaborative-doc/README.md) | Google Docs, Figma | OT/CRDT, single-writer serialization, operation log |
+| [Cloud Storage](templates/cloud-storage/README.md) | Dropbox, iCloud | Chunking, content-addressed dedup, incremental sync |
+| [Notification System](templates/notification-system/README.md) | Novu, FCM/APNs | Multi-channel fan-out, dedup/throttling, async retry |
+| [Online Ticketing](templates/online-ticketing/README.md) | Ticketmaster, 12306 | Virtual waiting room, atomic stock decrement, seat-lock TTL |
+
+**🤖 AI-native systems** (new)
+
+| Template | Representative products / prototypes | Key architecture themes |
+|---|---|---|
+| [AI Gateway / Relay](templates/ai-gateway/README.md) | One API, LiteLLM, Portkey | Unified API, billing & rate-limit, load balancing, caching |
+| [RAG Knowledge Base](templates/rag-knowledge-base/README.md) | RAGFlow, LlamaIndex, Dify | Chunking, vector retrieval, hybrid search + rerank, citations |
+| [AI Agent / Workflow](templates/ai-agent-platform/README.md) | Dify, Coze, LangGraph | Action loop, tool sandbox, memory, guardrails |
+| [Inference Serving](templates/inference-serving/README.md) | vLLM, SGLang, Triton | Continuous batching, paged KV cache, quantization |
+| [Vector Database](templates/vector-database/README.md) | Milvus, Qdrant, pgvector | ANN, HNSW/IVF, recall–latency trade-off |
 
 > 👉 **Want to add your own template?** Follow the unified format in [templates/_TEMPLATE.md](templates/_TEMPLATE.md).
 
@@ -113,7 +133,7 @@ Jump straight to each template's "Key Decisions & Trade-offs" and "Evolution Pat
 Contributions are welcome — new templates, fixes, and especially **English translations** of the tutorial and existing templates.
 
 1. Copy [`templates/_TEMPLATE.md`](templates/_TEMPLATE.md) into a new folder, e.g. `templates/your-system/README.md`.
-2. Fill in all 13 sections and **stay strictly at the architecture level** — the moment you start writing "use library YY in language XX", stop and ask: is this an architecture decision, or an implementation detail?
+2. Fill in all 14 sections (including **real** reference-prototype links) and **stay strictly at the architecture level** — the moment you start writing "use library YY in language XX", stop and ask: is this an architecture decision, or an implementation detail?
 3. Draw diagrams in ASCII (plain text, viewable everywhere, never breaks).
 4. Add a row to the template list.
 

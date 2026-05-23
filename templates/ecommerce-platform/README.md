@@ -258,6 +258,15 @@
 - 💡 **洪峰要『整形』,不要『硬扛』。** 限流、排队、削峰、降级是一套通用的「流量整形」工具,任何会遇到尖峰的系统都用得上。
 - 💡 **凡是会被重试的写操作,都要幂等。** 在分布式世界里重试是常态,幂等是保证「重试不闯祸」的通用纪律——尤其是任何碰钱的地方。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**权威模式库**与**官方工程文档**整理。
+
+**📖 模式 / 工程文档:**
+- [Pattern: Saga (microservices.io)](https://microservices.io/patterns/data/saga.html) — 用本地事务序列 + 补偿事务维持跨服务数据一致性。
+- [Stripe: Designing robust and predictable APIs with idempotency](https://stripe.com/blog/idempotency) — 幂等键实现下单 / 支付防重复扣款。
+- [Stripe: Idempotent requests (API 文档)](https://docs.stripe.com/api/idempotent_requests) — 幂等键的具体语义,对应订单 / 库存防重复操作。
+
 ---
 
 > 📌 一句话记住电商平台:**它不是「商品很多的网站」,而是「一台钱货不能错、还要扛得住洪峰的交易机器」——所有架构取舍,最终都在回答『这块数据该多较真,以及大促那天它崩不崩』。**

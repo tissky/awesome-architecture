@@ -220,6 +220,17 @@
 - 💡 **把昂贵的活儿交给能干它的最小工具。** 模型路由的思想,等同于「别用重型方案解决轻量问题」。
 - 💡 **任何重新进入核心系统的外部数据都是不可信的。** 提示注入只是「永远不要信任用户输入」这条老规矩,在 AI 时代的新形态。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**真实开源项目**与**论文**整理。AI 对话产品的「推理服务 / 接入编排 / 检索」三块,在本仓库分别有 [模型推理服务](../inference-serving/README.md)、[AI 网关](../ai-gateway/README.md)、[RAG 知识库](../rag-knowledge-base/README.md) 三个模板做放大特写。
+
+**🔧 开源原型(可直接读代码):**
+- [vllm-project/vllm](https://github.com/vllm-project/vllm) — 主流 LLM 推理 / 服务引擎,体现 GPU 推理、连续批处理、KV 缓存管理。
+- [langchain-ai/langchain](https://github.com/langchain-ai/langchain) — 经典 LLM 应用框架,体现 RAG 与工具调用(function calling)的编排。
+
+**📖 论文:**
+- [Efficient Memory Management for LLM Serving with PagedAttention (SOSP'23)](https://arxiv.org/abs/2309.06180) — vLLM 背后的论文,讲 KV 缓存的虚拟内存式分页管理。
+
 ---
 
 > 📌 一句话记住 AI 对话产品:**它不是「逻辑很复杂的网站」,而是「一台围着昂贵 GPU 转的精密机器」——所有架构取舍,最终都在回答『怎么把这块算力用得又快又省又安全』。**

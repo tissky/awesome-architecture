@@ -233,6 +233,15 @@
 - 💡 **识别「允许不那么准/不那么实时」的数据,把它降级处理。** presence 用最终一致省下大量成本。哪里能松弛,哪里就能换来弹性与省钱。
 - 💡 **先落库、再投递。** 把「持久化」放在「送出」之前,是「不丢」的根基——这条次序原则在任何要求可靠的写-投递链路里都成立。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**官方工程博客**整理。
+
+**📖 工程博客:**
+- [How Discord Stores Trillions of Messages](https://discord.com/blog/how-discord-stores-trillions-of-messages) — 海量消息存储从 Cassandra 迁到 ScyllaDB、请求合并降延迟。
+- [Slack: Flannel, an edge cache to make Slack scale](https://slack.engineering/flannel-an-application-level-edge-cache-to-make-slack-scale/) — 承载数百万 WebSocket 长连接的边缘缓存。
+- [WhatsApp: Scaling to Millions of Simultaneous Connections (Rick Reed)](http://www.erlang-factory.com/conference/SFBay2012/speakers/RickReed) — 单机支撑百万级并发长连接(每连接一进程)。
+
 ---
 
 > 📌 一句话记住实时通讯:**它不是「能发消息的网站」,而是「一张永远在线的消息投递网」——核心难点是『维持海量有状态长连接 + 在不可靠网络上做到不丢、不重、不乱序』,所有架构机制(网关路由、序号、ack/重试/去重、离线存推)都在为这两件事服务。**

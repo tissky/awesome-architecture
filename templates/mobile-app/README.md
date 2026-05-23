@@ -237,6 +237,17 @@
 - 💡 **凡是『发布出去就收不回来』的东西,接口都必须向后兼容。** 移动客户端如此,对外开放的 API、被别人依赖的数据格式也如此。无法强制对方升级时,兼容性就是纪律。
 - 💡 **不要把信任放在你控制不了的地方。** 客户端运行在用户(可能是攻击者)的设备上,它的任何结论都得由你能掌控的服务端来确认。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**官方架构指南**与**真实开源项目**整理。
+
+**📖 官方指南 / 理念:**
+- [Android: Build an offline-first app](https://developer.android.com/topic/architecture/data-layer/offline-first) — Google 官方:本地数据源作为唯一真相、UI 读本地、后台同步引擎。
+- [Local-first software (Ink & Switch)](https://www.inkandswitch.com/essay/local-first/) — 提出 "local-first" 概念的原始长文:本地优先、离线可用与冲突合并。
+
+**🔧 开源原型(可直接读代码):**
+- [automerge/automerge](https://github.com/automerge/automerge) — 经典 CRDT 库,无需中心服务器即可自动合并多设备并发改动。
+
 ---
 
 > 📌 一句话记住移动应用:**它不是「屏幕变小的网页」,而是「一个揣在口袋里、随时可能掉线的半个系统」——所有架构取舍,最终都在回答『网断了,它还顺不顺手、数据还对不对得齐』。**

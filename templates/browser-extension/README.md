@@ -256,6 +256,17 @@
 - 💡 **当商业模式建立在某一笔技术动作上(这里是归因),那笔动作的合法与道德边界,就是你架构里最硬的约束。** 技术能做到,不代表应该做——有时道德红线就是系统的硬性需求。
 - 💡 **警惕「你赖以运行的地基会自己移动」。** 平台政策、第三方页面结构都不在你掌控内;架构上要把对它们的依赖收拢、隔离、可替换。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**官方文档**与**真实开源扩展**整理。
+
+**📖 官方文档:**
+- [MDN: Anatomy of a WebExtension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) — 内容脚本与后台脚本的职责分离及消息通信。
+- [Chrome: Migrate to a service worker (Manifest V3)](https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers) — MV3 后台被 service worker 取代、按需运行、状态需持久化。
+
+**🔧 开源原型(可直接读代码):**
+- [gorhill/uBlock](https://github.com/gorhill/uBlock) — 经典开源扩展,体现内容过滤 / 页面注入与隐私保护的工程实践。
+
 ---
 
 > 📌 一句话记住浏览器扩展:**它是「寄居在别人页面里、却能看到用户一切」的特殊存在——所有架构取舍,最终都在回答『如何用最小的权限、最克制的数据,把这层注入能力做得既有用、又让人信得过』。**

@@ -233,6 +233,17 @@
 - 💡 **预计算是用空间换读时延的利器,但只为热路径预计算、冷路径降级。** 时间线只保留最近 N 条、深翻才慢查,是「别为冷门付全量代价」。
 - 💡 **找到系统的「松弛维度」并把它用足。** 这里是「发文到可见可以慢几秒」的最终一致——正是它让扇出可以异步、可削峰、可重试。识别出哪里允许「不那么实时/不那么强一致」,往往就解锁了整套架构的弹性。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**工程剖析**与**真实开源项目**整理。
+
+**📖 工程博客:**
+- [The Architecture Twitter Uses to Deal with 150M Active Users (High Scalability)](https://highscalability.com/the-architecture-twitter-uses-to-deal-with-150m-active-users/) — 写时扇出(fanout-on-write)把推文推入 follower 的时间线缓存。
+- [Scaling Instagram's recommendation system (Meta Engineering)](https://engineering.fb.com/2025/05/21/production-engineering/journey-to-1000-models-scaling-instagrams-recommendation-system/) — 信息流召回 / 排序漏斗在海量规模下的架构。
+
+**🔧 开源原型(可直接读代码):**
+- [mastodon/mastodon](https://github.com/mastodon/mastodon) — 开源微博社交网络,可读源码的关注图与主页时间线投递实现。
+
 ---
 
 > 📌 一句话记住社交信息流:**它不是「存帖子的数据库」,而是「一台为每个人现场组装个性化列表的分发引擎」——核心矛盾永远是『这份首页提前算好(推),还是刷新时现算(拉)』,而答案对普通人和大 V 截然不同。**

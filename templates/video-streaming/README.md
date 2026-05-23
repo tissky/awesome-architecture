@@ -238,6 +238,15 @@
 - 💡 **同一份内容做成多档、按实时条件动态选取。** 多码率 + 自适应的本质是「准备好一组弹性档位,运行时按真实环境挑最合适的」——这套思想在限流降级、多级服务质量里同样适用。
 - 💡 **识别你系统真正的「成本大头」,围绕它做架构。** 这里是带宽,所以 CDN、命中率、码率档位才是核心议题,而不是代码优雅。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**官方工程博客 / 文档**整理。
+
+**📖 工程博客 / 文档:**
+- [Netflix: Per-Title Encode Optimization](https://netflixtechblog.com/per-title-encode-optimization-7e99442b62a2) — 按片定制编码阶梯(转码 + 自适应码率的码率阶梯优化)。
+- [Netflix Open Connect Overview (PDF)](https://openconnect.netflix.com/Open-Connect-Overview.pdf) — 自建 CDN(Open Connect)在 ISP 部署缓存服务器的内容分发架构。
+- [HLS vs. DASH (Wowza)](https://www.wowza.com/blog/hls-vs-dash) — 两大自适应码率流媒体协议对比(分段与码率切换)。
+
 ---
 
 > 📌 一句话记住视频流媒体:**它不是「能放视频的网站」,而是「一条全球内容物流网」——先把一份源片加工成人人能看的多版本(转码),再把它铺到离每个人最近的前置仓(CDN),所有架构取舍最终都在回答『怎么把视频送得又快、又不卡、又省带宽』。**

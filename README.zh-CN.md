@@ -56,6 +56,10 @@ awesome-architecture/
 
 每一个模板都是一张「架构地图」。我们**刻意不讨论用什么语言、什么框架**,只讨论:这类系统在解决什么问题、由哪些部件组成、数据怎么流动、关键决策怎么取舍、规模化时会死在哪里。
 
+> 目前共 **21** 个模板(16 经典 / 通用 + 5 AI 原生),每个都在末尾附**真实开源项目 / 工程文档链接**,可顺着去读源码。
+
+**经典 / 通用系统:**
+
 | 模板 | 代表产品 | 核心架构看点 |
 |---|---|---|
 | [AI 对话产品](templates/ai-chat-product/README.md) | Claude、ChatGPT | LLM 推理、流式输出、上下文管理、RAG、成本控制 |
@@ -66,6 +70,24 @@ awesome-architecture/
 | [社交信息流](templates/social-feed/README.md) | Twitter/X、Instagram | Feed 拉取/推送、关注关系、热点扩散 |
 | [视频流媒体](templates/video-streaming/README.md) | Netflix、YouTube | 转码、CDN、自适应码率、推荐 |
 | [实时通讯](templates/realtime-chat/README.md) | WhatsApp、Slack、微信 | 长连接、消息时序、离线投递、群扩散 |
+| [短链接服务](templates/url-shortener/README.md) | Bitly、TinyURL、t.co | 读多写少、缓存、301/302、分布式唯一 ID |
+| [支付系统](templates/payment-system/README.md) | Stripe、支付宝、PayPal | 幂等、复式记账、对账、状态机 |
+| [搜索引擎](templates/search-engine/README.md) | Google、Elasticsearch | 倒排索引、相关性排序、召回+精排、分片 |
+| [网约车 / 出行](templates/ride-hailing/README.md) | Uber、滴滴 | 地理空间索引、实时位置、供需匹配、动态定价 |
+| [实时协同文档](templates/collaborative-doc/README.md) | Google Docs、Figma | OT/CRDT、单 writer 串行、操作日志、离线同步 |
+| [云存储 / 网盘](templates/cloud-storage/README.md) | Dropbox、iCloud | 文件分块、内容寻址去重、增量同步、断点续传 |
+| [通知 / 推送系统](templates/notification-system/README.md) | Novu、FCM/APNs | 多渠道扇出、去重限频、异步重试、优先级 |
+| [在线票务 / 抢票](templates/online-ticketing/README.md) | Ticketmaster、大麦、12306 | 虚拟等候室、原子扣减防超卖、锁座超时 |
+
+**🤖 AI 原生系统(LLM 时代新增):**
+
+| 模板 | 代表产品 / 原型 | 核心架构看点 |
+|---|---|---|
+| [AI 中转站 / 网关](templates/ai-gateway/README.md) | One API、LiteLLM、Portkey | 统一接口、计费限流、负载均衡、故障转移、缓存 |
+| [RAG 知识库](templates/rag-knowledge-base/README.md) | RAGFlow、LlamaIndex、Dify | 切块、向量检索、混合检索+重排、引用溯源 |
+| [AI Agent / 工作流](templates/ai-agent-platform/README.md) | Dify、Coze、LangGraph | 行动循环、工具沙箱、记忆、可控兜底 |
+| [模型推理服务](templates/inference-serving/README.md) | vLLM、SGLang、Triton | 连续批处理、分页 KV 缓存、量化、多副本 |
+| [向量数据库](templates/vector-database/README.md) | Milvus、Qdrant、pgvector | ANN 近似最近邻、HNSW/IVF、召回-延迟权衡 |
 
 > 👉 **想加入自己的模板?** 套用 [templates/_TEMPLATE.md](templates/_TEMPLATE.md) 的统一格式即可。
 

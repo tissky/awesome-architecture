@@ -256,6 +256,15 @@
 - 💡 **无状态是一条几乎零成本、却为未来扫清最大障碍的纪律——值得从第一天就遵守。** 它让「加机器」成为最轻松的扩展手段。
 - 💡 **让需求来驱动架构演进,而不是让你的预判来。** 真遇到问题再加是廉价的,为没发生的事提前加是昂贵的。
 
+## 参考原型与延伸阅读
+
+> 本模板基于以下**经典方法论**与**官方架构文档**整理。
+
+**📖 方法论 / 官方文档:**
+- [The Twelve-Factor App](https://12factor.net/) — 构建 SaaS 应用的经典方法论:配置、无状态进程、可水平扩展等 12 原则。
+- [Cache-Aside Pattern (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside) — 经典的旁路缓存(Cache-Aside)分层缓存策略。
+- [Scaling reads with Amazon Aurora (AWS Docs)](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Replication.ReadScaling.html) — 用 reader endpoint + 多只读副本实现读写分离 / 读扩展。
+
 ---
 
 > 📌 一句话记住标准 Web 应用:**它教的不是「怎么把系统做复杂」,而是「怎么忍住不把它做复杂」——绝大多数系统死于过度设计,而克制,恰恰是最难、也最值钱的架构能力。**
