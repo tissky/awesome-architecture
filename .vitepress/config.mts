@@ -47,6 +47,7 @@ export default defineConfig({
   title: 'Awesome Architecture',
   description: '专注「架构思维」的中文知识库:8 章教程 + 21 张真实系统架构地图。',
   lang: 'zh-Hans',
+  base: process.env.GITHUB_PAGES ? '/awesome-architecture/' : '/',
   cleanUrls: true,
   ignoreDeadLinks: false,
   lastUpdated: true,
