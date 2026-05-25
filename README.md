@@ -129,6 +129,20 @@ awesome-architecture/
 
 ---
 
+## ⭐ Star 历史
+
+> 如果它帮到了你,点颗 Star 就是对它最好的鼓励。
+
+<a href="https://star-history.com/#study8677/awesome-architecture&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=study8677/awesome-architecture&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=study8677/awesome-architecture&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=study8677/awesome-architecture&type=Date" />
+  </picture>
+</a>
+
+---
+
 ## 🔗 友链
 
 - [LINUX DO](https://linux.do/) —— 新的理想型社区,一群热爱技术、乐于分享的开发者聚集地。

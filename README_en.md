@@ -146,6 +146,20 @@ Contributions are welcome — new templates, fixes, and especially **English tra
 
 ---
 
+## ⭐ Star History
+
+> If this repo helped you, a Star is the best encouragement.
+
+<a href="https://star-history.com/#study8677/awesome-architecture&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=study8677/awesome-architecture&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=study8677/awesome-architecture&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=study8677/awesome-architecture&type=Date" />
+  </picture>
+</a>
+
+---
+
 ## 🔗 Friends
 
 - [LINUX DO](https://linux.do/) — "Where possible begins." A new ideal-type community for developers who love tech and sharing.
