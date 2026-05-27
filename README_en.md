@@ -72,6 +72,25 @@ Not "how to use framework X", but a transferable way of thinking: how to turn a 
 | [16](tutorial/16-安全与多租户架构.md) | Security & multi-tenancy | Threat modeling, zero trust, blast radius, tenant isolation |
 | [17](tutorial/17-大模型时代的架构判断.md) | Architecting in the age of LLMs | Vibe coding, nondeterminism, context engineering, agentic hard parts |
 
+**🎯 Practice track (18–22, planned) — put the method on real cases; bridge tutorial → templates:**
+
+| Ch. | Topic | What you'll practice |
+|---|---|---|
+| 18 | Reading the map: deconstruct unfamiliar systems | Reverse-engineer *why* a `templates/` map is designed that way |
+| 19 | Full design walkthrough: medium complexity | Run the ch.07 eight-step flow again — on money/inventory-grade constraints |
+| 20 | Evolution playbook: MVP → scale | Ch.08 + [evolution trigger signals](tutorial/演进触发信号.md) — three life stages of one system |
+| 21 | Splitting & migration in practice | Ch.14 as a case: strangler, parallel run, zero-downtime migration |
+| 22 | AI-native system design | Land ch.17's three new constraints (RAG / Agent) — bridge to the AI-collab track |
+
+**🤝 AI-collaborative design track (23–26, planned) — collaborate with AI without losing judgment:**
+
+| Ch. | Topic | What you'll master |
+|---|---|---|
+| 23 | Spec as architecture: constraints for AI | ADR / `AGENTS.md` → enforceable guardrails; pairs with [architecture-copilot](https://github.com/study8677/architecture-copilot) |
+| 24 | Review checklist: what AI output omits by default | Production-grade review checklist from ch.11/12/16 |
+| 25 | Eval-driven: bake "good enough" into architecture | Eval as a CI gate for nondeterministic systems |
+| 26 | Collaboration decision tree: when to vibe, when to spec-first | Prototype vs production workflow — the capstone |
+
 > 👉 **New here? Start with [tutorial/README.md](tutorial/README.md)** for the full learning path.
 
 ### 🗺️ templates/ — Architecture maps of real systems
@@ -120,7 +139,7 @@ Each template is an "architecture map". We **deliberately avoid discussing langu
 
 > 👉 **Want to add your own template?** Follow the unified format in [templates/_TEMPLATE.md](templates/_TEMPLATE.md).
 
-> 📝 **Now fully bilingual** — all **17 tutorial chapters and 25 templates** are available in English. Use the language switch (top-right on the site), or browse `en/` in the repo.
+> 📝 **Now fully bilingual** — all **17 published tutorial chapters and 25 templates** are available in English; **practice track (18–22) and AI-collaborative design track (23–26) are planned.** Use the language switch (top-right on the site), or browse `en/` in the repo.
 
 ---
 

@@ -18,7 +18,7 @@ This tutorial is the missing lesson on judgment.
 
 ## Learning path
 
-The tutorial has four parts. **Reading in order is recommended**, but each chapter also stands on its own.
+The tutorial has six parts. **Reading in order is recommended**, but each chapter also stands on its own.
 
 ### Part 1 · Build the mindset (01–03) — a new way of seeing systems
 
@@ -51,6 +51,50 @@ The tutorial has four parts. **Reading in order is recommended**, but each chapt
 
 ---
 
+## 🚀 Advanced track (10–17) — taming the hard rock that bites once a system gets big or critical
+
+The foundations teach you to design a small-to-medium system from scratch; **the advanced track handles a different class of problem** — distribution, failure, scale, evolution, organization, security — capped by architectural judgment in the LLM era.
+
+| Ch. | In one line |
+|---|---|
+| [10 · Distributed systems: the hard truths](./10-分布式系统的硬道理) | Partial failure, no global clock, consensus is expensive — why distributed is hard. |
+| [11 · The engineering of data consistency](./11-数据一致性工程) | No cross-service transactions: Saga, Outbox, idempotency, event sourcing. |
+| [12 · Designing for failure: resilience](./12-为失败而设计) | Assume failure: circuit breakers, isolation, degradation, SLOs, chaos. |
+| [13 · The mechanics of scale](./13-规模化的力学) | Sharding, consistent hashing, hot keys, multi-region, tail latency. |
+| [14 · Evolving & splitting large systems](./14-演进与拆分大型系统) | Strangler fig, parallel run, zero-downtime migration, splitting the monolith. |
+| [15 · Organization as architecture](./15-组织即架构) | Conway's law: systems mirror orgs; team topologies & platform engineering. |
+| [16 · Security & multi-tenancy](./16-安全与多租户架构) | Security as structure: threat modeling, zero trust, blast radius, tenant isolation. |
+| [17 · Architecting in the age of LLMs](./17-大模型时代的架构判断) | What stays irreplaceable in the vibe-coding era; gather theory to the present moment. |
+
+---
+
+## 🎯 Practice track (18–22, planned) — put judgment on real cases
+
+Foundations + advanced teach *how to judge*; **the practice track teaches how to drill** — threading [07](./07-从0到1设计一个系统), [08](./08-架构决策记录与演进), [10–16](./10-分布式系统的硬道理), and the `templates/` maps into one narrative. **Read this track before the AI-collaborative design track.**
+
+| Ch. | In one line |
+|---|---|
+| 18 · Reading the map: deconstruct unfamiliar systems | Reverse-read a template: constraints, trade-offs, where it dies. |
+| 19 · Full design walkthrough: medium complexity | Run the ch.07 eight-step flow again — on money/inventory-grade constraints. |
+| 20 · Evolution playbook: MVP → scale | Same system as ch.19: read signals, write ADRs, decide when to upgrade. |
+| 21 · Splitting & migration in practice | Land ch.14: strangler, parallel run, zero-downtime migration, modular monolith. |
+| 22 · AI-native system design | Full design drill for ch.17's constraints (RAG / Agent) — bridge to the next track. |
+
+---
+
+## 🤝 AI-collaborative design track (23–26, planned) — collaborate with AI without losing judgment
+
+**Prerequisite: practice track.** Not vibe-coding tool tips — **workflow & review**: how to write specs for AI, what output omits by default, eval as a gate, when to vibe vs spec-first. Same product line as the [architecture-copilot](https://github.com/study8677/architecture-copilot) skill.
+
+| Ch. | In one line |
+|---|---|
+| 23 · Spec as architecture: constraints for AI | Turn ADRs and quality goals into guardrails AI can follow. |
+| 24 · Review checklist: what AI output omits by default | Production review checklist from ch.11/12/16 — will this design hold up? |
+| 25 · Eval-driven: bake "good enough" into architecture | Eval gates for nondeterministic systems — catch silent regressions. |
+| 26 · Collaboration decision tree: when to vibe, when to spec-first | Prototype: vibe freely; production: close with judgment — the capstone workflow. |
+
+---
+
 ## After finishing, you should be able to
 
 - [ ] Take a vague requirement and ask the right questions to break it into clear constraints and quality goals.
@@ -58,6 +102,8 @@ The tutorial has four parts. **Reading in order is recommended**, but each chapt
 - [ ] Draw a clear architecture diagram that product, backend, and frontend all understand.
 - [ ] Look at an unfamiliar system and quickly grasp *why it's designed that way*.
 - [ ] Make architecture decisions based on constraints and trade-offs — and write down the reasons.
+- [ ] *(Practice track)* Walk a full path on an unfamiliar system or template: read → design → evolve → migrate.
+- [ ] *(AI-collab track)* Write architecture constraints for AI, review its output, and pick the right collaboration mode for prototype vs production.
 
 ---
 

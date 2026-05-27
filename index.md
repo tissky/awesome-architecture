@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Awesome Architecture"
   text: "像架构师一样思考"
-  tagline: 写代码这件事正在消失,而判断力越来越值钱。17 章架构思维教程(入门 + 进阶)+ 25 张真实系统架构地图——只讲架构,不讲语法。
+  tagline: 写代码这件事正在消失,而判断力越来越值钱。26 章架构思维教程(入门 + 进阶 + 实战 + AI 协同,后两篇规划中)+ 25 张真实系统架构地图——只讲架构,不讲语法。
   actions:
     - theme: brand
       text: 开始学习 →

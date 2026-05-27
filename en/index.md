@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Awesome Architecture"
   text: "Think like an architect"
-  tagline: "Writing code is disappearing; judgment is what's getting valuable. 17 chapters on architectural thinking (foundations + advanced) + 25 architecture maps of real systems — architecture only, no syntax."
+  tagline: "Writing code is disappearing; judgment is what's getting valuable. 26 chapters on architectural thinking (foundations + advanced + practice + AI-collab; last two tracks planned) + 25 architecture maps of real systems — architecture only, no syntax."
   actions:
     - theme: brand
       text: Browse in 中文 →
