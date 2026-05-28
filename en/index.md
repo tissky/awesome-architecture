@@ -4,10 +4,13 @@ layout: home
 hero:
   name: "Awesome Architecture"
   text: "Think like an architect"
-  tagline: "Writing code is disappearing; judgment is what's getting valuable. 26 chapters on architectural thinking (foundations + advanced + practice + AI-collab; last two tracks planned) + 25 architecture maps of real systems — architecture only, no syntax."
+  tagline: "Writing code is disappearing; judgment is what's getting valuable. 26 chapters on architectural thinking (foundations + advanced complete; practice track in progress; AI-collab planned) + 25 architecture maps of real systems — architecture only, no syntax."
   actions:
     - theme: brand
-      text: Browse in 中文 →
+      text: Start the tutorial →
+      link: /en/tutorial/README
+    - theme: alt
+      text: Browse in 中文
       link: /
     - theme: alt
       text: GitHub
@@ -28,4 +31,4 @@ features:
     details: Each template links to real open-source projects and engineering papers (vLLM, LiteLLM, TigerBeetle, Uber H3, Figma…).
 ---
 
-> 🚧 **English translation in progress.** The full tutorial and all 21 templates are currently written in Chinese (and complete). Chapters are being translated one by one — [contributions welcome](https://github.com/study8677/awesome-architecture).
+> ✅ **Fully bilingual.** All 26 tutorial chapters and 25 templates are available in English — use the language switch (top-right) or browse `en/` in the repo. [Contributions welcome](https://github.com/study8677/awesome-architecture).
