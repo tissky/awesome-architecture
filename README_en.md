@@ -72,12 +72,12 @@ Not "how to use framework X", but a transferable way of thinking: how to turn a 
 | [16](tutorial/16-安全与多租户架构.md) | Security & multi-tenancy | Threat modeling, zero trust, blast radius, tenant isolation |
 | [17](tutorial/17-大模型时代的架构判断.md) | Architecting in the age of LLMs | Vibe coding, nondeterminism, context engineering, agentic hard parts |
 
-**🎯 Practice track (18–22, planned) — put the method on real cases; bridge tutorial → templates:**
+**🎯 Practice track (18–22, in progress) — put the method on real cases; bridge tutorial → templates:**
 
 | Ch. | Topic | What you'll practice |
 |---|---|---|
-| 18 | Reading the map: deconstruct unfamiliar systems | Reverse-engineer *why* a `templates/` map is designed that way |
-| 19 | Full design walkthrough: medium complexity | Run the ch.07 eight-step flow again — on money/inventory-grade constraints |
+| [18](tutorial/18-读地图用框架拆解陌生系统.md) | Reading the map: deconstruct unfamiliar systems | Reverse-engineer *why* a `templates/` map is designed that way; practice on RAG / AI chat product |
+| [19](tutorial/19-完整设计演练中等复杂度系统.md) | Full design walkthrough: medium complexity | Run the ch.07 eight-step flow — design an AI customer-service assistant that looks up orders and issues refunds (with token-cost math) |
 | 20 | Evolution playbook: MVP → scale | Ch.08 + [evolution trigger signals](tutorial/演进触发信号.md) — three life stages of one system |
 | 21 | Splitting & migration in practice | Ch.14 as a case: strangler, parallel run, zero-downtime migration |
 | 22 | AI-native system design | Land ch.17's three new constraints (RAG / Agent) — bridge to the AI-collab track |
@@ -139,7 +139,7 @@ Each template is an "architecture map". We **deliberately avoid discussing langu
 
 > 👉 **Want to add your own template?** Follow the unified format in [templates/_TEMPLATE.md](templates/_TEMPLATE.md).
 
-> 📝 **Now fully bilingual** — all **17 published tutorial chapters and 25 templates** are available in English; **practice track (18–22) and AI-collaborative design track (23–26) are planned.** Use the language switch (top-right on the site), or browse `en/` in the repo.
+> 📝 **Now fully bilingual** — all **19 published tutorial chapters and 25 templates** are available in English; **the rest of the practice track (20–22) and the AI-collaborative design track (23–26) are planned.** Use the language switch (top-right on the site), or browse `en/` in the repo.
 
 ---
 
