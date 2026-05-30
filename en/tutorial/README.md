@@ -68,7 +68,7 @@ The foundations teach you to design a small-to-medium system from scratch; **the
 
 ---
 
-## 🎯 Practice track (18–22, in progress) — put judgment on real cases
+## 🎯 Practice track (18–22) — put judgment on real cases
 
 Foundations + advanced teach *how to judge*; **the practice track teaches how to drill** — threading [07](./07-从0到1设计一个系统), [08](./08-架构决策记录与演进), [10–16](./10-分布式系统的硬道理), and the `templates/` maps into one narrative. **Read this track before the AI-collaborative design track.**
 
@@ -76,22 +76,22 @@ Foundations + advanced teach *how to judge*; **the practice track teaches how to
 |---|---|
 | [18 · Reading the map: deconstruct unfamiliar systems](./18-读地图用框架拆解陌生系统) | Four-step reverse-reading; practice on RAG / AI chat product maps. |
 | [19 · Full design walkthrough: medium complexity](./19-完整设计演练中等复杂度系统) | Run the ch.07 eight-step flow again — design an AI customer-service assistant that looks up orders and issues refunds, from scratch. |
-| 20 · Evolution playbook: MVP → scale | Same system as ch.19: read signals, write ADRs, decide when to upgrade. |
-| 21 · Splitting & migration in practice | Land ch.14: strangler, parallel run, zero-downtime migration, modular monolith. |
-| 22 · AI-native system design | Full design drill for ch.17's constraints (RAG / Agent) — bridge to the next track. |
+| [20 · Evolution playbook: MVP → scale](./20-演进剧本MVP到规模化) | Same AI assistant as ch.19: read quantified signals, write ADRs, decide when to upgrade. |
+| [21 · Splitting & migration in practice](./21-拆分与迁移实战) | Land ch.14: strangler, branch by abstraction, shadow traffic, zero-downtime vector-store swap. |
+| [22 · AI-native system design](./22-AI原生系统设计) | Upgrade the ch.19 assistant into an autonomous Agent; land ch.17's three new constraints; bridge to the next track. |
 
 ---
 
-## 🤝 AI-collaborative design track (23–26, planned) — collaborate with AI without losing judgment
+## 🤝 AI-collaborative design track (23–26) — collaborate with AI without losing judgment
 
 **Prerequisite: practice track.** Not vibe-coding tool tips — **workflow & review**: how to write specs for AI, what output omits by default, eval as a gate, when to vibe vs spec-first. Same product line as the [architecture-copilot](https://github.com/study8677/architecture-copilot) skill.
 
 | Ch. | In one line |
 |---|---|
-| 23 · Spec as architecture: constraints for AI | Turn ADRs and quality goals into guardrails AI can follow. |
-| 24 · Review checklist: what AI output omits by default | Production review checklist from ch.11/12/16 — will this design hold up? |
-| 25 · Eval-driven: bake "good enough" into architecture | Eval gates for nondeterministic systems — catch silent regressions. |
-| 26 · Collaboration decision tree: when to vibe, when to spec-first | Prototype: vibe freely; production: close with judgment — the capstone workflow. |
+| [23 · Spec as architecture: constraints for AI](./23-规格即架构约束怎么写给AI) | Turn ADRs and quality goals into guardrails AI can follow. |
+| [24 · Review checklist: what AI output omits by default](./24-审查清单AI产出默认缺什么) | Production review checklist from ch.11/12/16 — will this design hold up? |
+| [25 · Eval-driven: bake "good enough" into architecture](./25-评测驱动把够好写进架构) | Eval gates for nondeterministic systems — catch silent regressions. |
+| [26 · Collaboration decision tree: when to vibe, when to spec-first](./26-协作决策树何时vibe何时spec-first) | Prototype: vibe freely; production: close with judgment — the capstone workflow. |
 
 ---
 

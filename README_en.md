@@ -74,24 +74,24 @@ Not "how to use framework X", but a transferable way of thinking: how to turn a 
 | [16](tutorial/16-安全与多租户架构.md) | Security & multi-tenancy | Threat modeling, zero trust, blast radius, tenant isolation |
 | [17](tutorial/17-大模型时代的架构判断.md) | Architecting in the age of LLMs | Vibe coding, nondeterminism, context engineering, agentic hard parts |
 
-**🎯 Practice track (18–22, in progress) — put the method on real cases; bridge tutorial → templates:**
+**🎯 Practice track (18–22) — put the method on real cases; bridge tutorial → templates:**
 
 | Ch. | Topic | What you'll practice |
 |---|---|---|
 | [18](tutorial/18-读地图用框架拆解陌生系统.md) | Reading the map: deconstruct unfamiliar systems | Reverse-engineer *why* a `templates/` map is designed that way; practice on RAG / AI chat product |
 | [19](tutorial/19-完整设计演练中等复杂度系统.md) | Full design walkthrough: medium complexity | Run the ch.07 eight-step flow — design an AI customer-service assistant that looks up orders and issues refunds (with token-cost math) |
-| 20 | Evolution playbook: MVP → scale | Ch.08 + [evolution trigger signals](tutorial/演进触发信号.md) — three life stages of one system |
-| 21 | Splitting & migration in practice | Ch.14 as a case: strangler, parallel run, zero-downtime migration |
-| 22 | AI-native system design | Land ch.17's three new constraints (RAG / Agent) — bridge to the AI-collab track |
+| [20](tutorial/20-演进剧本MVP到规模化.md) | Evolution playbook: MVP → scale | Ch.08 + [evolution trigger signals](tutorial/演进触发信号.md) — three life stages of one AI assistant |
+| [21](tutorial/21-拆分与迁移实战.md) | Splitting & migration in practice | Ch.14 as a case: strangler, branch by abstraction, shadow traffic, zero-downtime vector-store swap |
+| [22](tutorial/22-AI原生系统设计.md) | AI-native system design | Upgrade the assistant into an autonomous Agent; land ch.17's three new constraints; bridge to the AI-collab track |
 
-**🤝 AI-collaborative design track (23–26, planned) — collaborate with AI without losing judgment:**
+**🤝 AI-collaborative design track (23–26) — collaborate with AI without losing judgment:**
 
 | Ch. | Topic | What you'll master |
 |---|---|---|
-| 23 | Spec as architecture: constraints for AI | ADR / `AGENTS.md` → enforceable guardrails; pairs with [architecture-copilot](https://github.com/study8677/architecture-copilot) |
-| 24 | Review checklist: what AI output omits by default | Production-grade review checklist from ch.11/12/16 |
-| 25 | Eval-driven: bake "good enough" into architecture | Eval as a CI gate for nondeterministic systems |
-| 26 | Collaboration decision tree: when to vibe, when to spec-first | Prototype vs production workflow — the capstone |
+| [23](tutorial/23-规格即架构约束怎么写给AI.md) | Spec as architecture: constraints for AI | ADR / `AGENTS.md` → enforceable guardrails; pairs with [architecture-copilot](https://github.com/study8677/architecture-copilot) |
+| [24](tutorial/24-审查清单AI产出默认缺什么.md) | Review checklist: what AI output omits by default | Production-grade review checklist from ch.11/12/16 |
+| [25](tutorial/25-评测驱动把够好写进架构.md) | Eval-driven: bake "good enough" into architecture | Eval as a CI gate for nondeterministic systems |
+| [26](tutorial/26-协作决策树何时vibe何时spec-first.md) | Collaboration decision tree: when to vibe, when to spec-first | Prototype vs production workflow — the capstone |
 
 > 👉 **New here? Start with [tutorial/README.md](tutorial/README.md)** for the full learning path.
 
@@ -141,7 +141,7 @@ Each template is an "architecture map". We **deliberately avoid discussing langu
 
 > 👉 **Want to add your own template?** Follow the unified format in [templates/_TEMPLATE.md](templates/_TEMPLATE.md).
 
-> 📝 **Now fully bilingual** — all **19 published tutorial chapters and 25 templates** are available in English; **the rest of the practice track (20–22) and the AI-collaborative design track (23–26) are planned.** Use the language switch (top-right on the site), or browse `en/` in the repo.
+> 📝 **Now fully bilingual** — all **26 tutorial chapters and 25 templates** are available in English. Use the language switch (top-right on the site), or browse `en/` in the repo.
 
 ---
 

@@ -30,6 +30,16 @@ const zhTutorialAdvanced = [
 const zhTutorialPractice = [
   { text: '18 · 读地图:用框架拆解陌生系统', link: '/tutorial/18-读地图用框架拆解陌生系统' },
   { text: '19 · 完整设计演练:中等复杂度系统', link: '/tutorial/19-完整设计演练中等复杂度系统' },
+  { text: '20 · 演进剧本:MVP 到规模化', link: '/tutorial/20-演进剧本MVP到规模化' },
+  { text: '21 · 拆分与迁移实战', link: '/tutorial/21-拆分与迁移实战' },
+  { text: '22 · AI 原生系统设计', link: '/tutorial/22-AI原生系统设计' },
+]
+
+const zhTutorialCollab = [
+  { text: '23 · 规格即架构:约束怎么写给 AI', link: '/tutorial/23-规格即架构约束怎么写给AI' },
+  { text: '24 · 审查清单:AI 产出默认缺什么', link: '/tutorial/24-审查清单AI产出默认缺什么' },
+  { text: '25 · 评测驱动:把「够好」写进架构', link: '/tutorial/25-评测驱动把够好写进架构' },
+  { text: '26 · 协作决策树:何时 vibe、何时 spec-first', link: '/tutorial/26-协作决策树何时vibe何时spec-first' },
 ]
 
 const zhCommon = [
@@ -68,7 +78,7 @@ const zhAgent = [
 
 export default defineConfig({
   title: 'Awesome Architecture',
-  description: '专注「架构思维」的中文知识库:19 章教程(入门 + 进阶 + 实战连载中)+ 25 张真实系统架构地图。',
+  description: '专注「架构思维」的中文知识库:26 章教程(入门 + 进阶 + 实战 + AI 协同)+ 25 张真实系统架构地图。',
   lang: 'zh-Hans',
   base: process.env.GITHUB_PAGES ? '/awesome-architecture/' : '/',
   cleanUrls: true,
@@ -78,7 +88,7 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
     ['meta', { property: 'og:title', content: 'Awesome Architecture · 架构图谱' }],
-    ['meta', { property: 'og:description', content: '像架构师一样思考:19 章教程(入门 + 进阶 + 实战连载中)+ 25 张真实系统架构地图。' }],
+    ['meta', { property: 'og:description', content: '像架构师一样思考:26 章教程(入门 + 进阶 + 实战 + AI 协同)+ 25 张真实系统架构地图。' }],
     // 注:Hypothesis 划词标注不再全站默认加载;改由评论区顶部的 toggle 按需注入。
     // 见 .vitepress/theme/components/Comments.vue 的 loadHypothesis()。
   ],
@@ -105,6 +115,7 @@ export default defineConfig({
             { text: '📚 入门篇', items: zhTutorial },
             { text: '🚀 进阶篇', items: zhTutorialAdvanced },
             { text: '🎯 实战篇', items: zhTutorialPractice },
+            { text: '🤝 AI 协同篇', items: zhTutorialCollab },
           ],
           '/templates/': [
             { text: '🗺️ 经典 / 通用系统', items: zhCommon },
@@ -115,6 +126,7 @@ export default defineConfig({
             { text: '📚 教程 · 入门篇', collapsed: false, items: zhTutorial },
             { text: '🚀 教程 · 进阶篇', collapsed: false, items: zhTutorialAdvanced },
             { text: '🎯 教程 · 实战篇', collapsed: false, items: zhTutorialPractice },
+            { text: '🤝 教程 · AI 协同篇', collapsed: false, items: zhTutorialCollab },
             { text: '🗺️ 经典 / 通用系统', collapsed: true, items: zhCommon },
             { text: '🤖 AI 原生系统', collapsed: true, items: zhAI },
             { text: '🦾 AI 编码 / 自治 Agent', collapsed: true, items: zhAgent },
@@ -179,6 +191,19 @@ export default defineConfig({
               items: [
                 { text: '18 · Reading the map: deconstruct unfamiliar systems', link: '/en/tutorial/18-读地图用框架拆解陌生系统' },
                 { text: '19 · Full design walkthrough: medium complexity', link: '/en/tutorial/19-完整设计演练中等复杂度系统' },
+                { text: '20 · Evolution playbook: MVP → scale', link: '/en/tutorial/20-演进剧本MVP到规模化' },
+                { text: '21 · Splitting & migration in practice', link: '/en/tutorial/21-拆分与迁移实战' },
+                { text: '22 · AI-native system design', link: '/en/tutorial/22-AI原生系统设计' },
+              ],
+            },
+            {
+              text: '🤝 Tutorial · AI-collaborative',
+              collapsed: true,
+              items: [
+                { text: '23 · Spec as architecture: constraints for AI', link: '/en/tutorial/23-规格即架构约束怎么写给AI' },
+                { text: '24 · Review checklist: what AI output omits by default', link: '/en/tutorial/24-审查清单AI产出默认缺什么' },
+                { text: '25 · Eval-driven: bake "good enough" into architecture', link: '/en/tutorial/25-评测驱动把够好写进架构' },
+                { text: '26 · Collaboration decision tree: when to vibe, when to spec-first', link: '/en/tutorial/26-协作决策树何时vibe何时spec-first' },
               ],
             },
             {

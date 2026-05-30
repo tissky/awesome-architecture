@@ -70,24 +70,24 @@ awesome-architecture/
 | [16](tutorial/16-安全与多租户架构.md) | 安全与多租户架构 | 威胁建模、零信任、爆炸半径、租户隔离 |
 | [17](tutorial/17-大模型时代的架构判断.md) | 大模型时代的架构判断 | vibe coding、非确定性、上下文工程、agentic 硬骨头 |
 
-**🎯 实战篇(18–22,陆续发布中)—— 把方法落到真实案例,补上「教程 → 模板」之间的桥:**
+**🎯 实战篇(18–22)—— 把方法落到真实案例,补上「教程 → 模板」之间的桥:**
 
 | 章节 | 主题 | 你将练会 |
 |---|---|---|
 | [18](tutorial/18-读地图用框架拆解陌生系统.md) | 读地图:用框架拆解陌生系统 | 对着 `templates/` 逆向读懂「为什么这么设计」;以 RAG / AI 对话产品练眼 |
 | [19](tutorial/19-完整设计演练中等复杂度系统.md) | 完整设计演练:中等复杂度系统 | 07 八步从 0 设计「能查单、能退款」的 AI 智能客服(含 token 成本估算) |
-| 20 | 演进剧本:MVP 到规模化 | 08 + [演进触发信号](tutorial/演进触发信号.md),同一系统的三段人生 |
-| 21 | 拆分与迁移实战 | 14 章方法案例化:绞杀者、并行运行、零停机迁移 |
-| 22 | AI 原生系统设计 | 17 章三个新约束的落地演练,引向 AI 协同篇 |
+| [20](tutorial/20-演进剧本MVP到规模化.md) | 演进剧本:MVP 到规模化 | 08 + [演进触发信号](tutorial/演进触发信号.md),同一个 AI 客服的三段人生 |
+| [21](tutorial/21-拆分与迁移实战.md) | 拆分与迁移实战 | 14 章案例化:绞杀者、抽象分支、影子流量、零停机换向量库 |
+| [22](tutorial/22-AI原生系统设计.md) | AI 原生系统设计 | 把客服升级为自主 Agent,落地 17 章三个新约束,引向 AI 协同篇 |
 
-**🤝 AI 协同设计篇(23–26,规划中)—— 会设计之后,学会与 AI 协作落地与审查:**
+**🤝 AI 协同设计篇(23–26)—— 会设计之后,学会与 AI 协作落地与审查:**
 
 | 章节 | 主题 | 你将掌握 |
 |---|---|---|
-| 23 | 规格即架构:约束怎么写给 AI | ADR / `AGENTS.md` → 可执行护栏,对接 [architecture-copilot](https://github.com/study8677/architecture-copilot) |
-| 24 | 审查清单:AI 产出默认缺什么 | 11/12/16 的生产级 review checklist |
-| 25 | 评测驱动:把「够好」写进架构 | eval 当 CI 门禁,承接非确定性 |
-| 26 | 协作决策树:何时 vibe、何时 spec-first | 原型 vs 生产的 workflow 总收束 |
+| [23](tutorial/23-规格即架构约束怎么写给AI.md) | 规格即架构:约束怎么写给 AI | ADR / `AGENTS.md` → 可执行护栏,对接 [architecture-copilot](https://github.com/study8677/architecture-copilot) |
+| [24](tutorial/24-审查清单AI产出默认缺什么.md) | 审查清单:AI 产出默认缺什么 | 11/12/16 的生产级 review checklist |
+| [25](tutorial/25-评测驱动把够好写进架构.md) | 评测驱动:把「够好」写进架构 | eval 当 CI 门禁,承接非确定性 |
+| [26](tutorial/26-协作决策树何时vibe何时spec-first.md) | 协作决策树:何时 vibe、何时 spec-first | 原型 vs 生产的 workflow 总收束 |
 
 > 👉 **新手从 [tutorial/README.md](tutorial/README.md) 开始**,那里有完整的学习路径。
 
