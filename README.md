@@ -38,7 +38,8 @@
 ```
 awesome-architecture/
 ├── tutorial/      📚 教程 —— 系统地教你「怎么像架构师一样思考」
-└── templates/     🗺️ 模板 —— 真实热门系统的架构地图,只讲架构、不讲语法
+├── templates/     🗺️ 模板 —— 真实热门系统的架构地图,只讲架构、不讲语法
+└── cases/         🧪 案例 —— 把具体项目从 0 推到上线,再推到真实压力下
 ```
 
 ### 📚 tutorial/ —— 成为更好架构师的教程
@@ -90,6 +91,23 @@ awesome-architecture/
 | [26](tutorial/26-协作决策树何时vibe何时spec-first.md) | 协作决策树:何时 vibe、何时 spec-first | 原型 vs 生产的 workflow 总收束 |
 
 > 👉 **新手从 [tutorial/README.md](tutorial/README.md) 开始**,那里有完整的学习路径。
+
+### 🧪 cases/ —— 把架构从答案写成推理过程
+
+`cases/` 不是更多模板,而是把一个具体项目从 0 推到能上线、再推到能扛住真实压力。它补的是 `tutorial/` 和 `templates/` 之间的最后一段路:模板告诉你「这类系统通常长什么样」,案例告诉你「在这个具体场景里,为什么最后只能这样取舍」。
+
+第一批 6 个核心案例已经收束:
+
+| 案例 | 对应能力 | 主要练什么 |
+|---|---|---|
+| [01 · StarArena:演唱会抢票系统](cases/stararena-ticketing/README.md) | 在线票务 / 电商 / 支付 | 有限库存、虚拟等候室、锁座、支付状态机、对账补偿 |
+| [02 · PatchDesk:轻量工单 SaaS](cases/patchdesk-saas/README.md) | 普通 Web / SaaS 后台 | 模块化单体、多租户隔离、RBAC、Outbox、异步通知、搜索报表演进 |
+| [03 · DocuMind:企业 RAG 知识库](cases/documind-rag/README.md) | RAG / AI 对话 / 向量数据库 | 文档入库、切块、混合检索、知识图谱 RAG、重排、引用、权限、提示注入、评测 |
+| [04 · SyncRoom:实时协同工作台](cases/syncroom-collaboration/README.md) | 实时通讯 / 协同文档 / 通知 | 长连接、服务端序号、离线补齐、多端同步、OT / CRDT、Presence、通知降级 |
+| [05 · FeedStream:内容分发系统](cases/feedstream-content/README.md) | 社交 Feed / 视频 / 搜索 | 推拉混合、大 V 扇出、时间线收件箱、推荐排序、搜索索引、视频转码、CDN、审核召回 |
+| [06 · CodePilot:编码 Agent 平台](cases/codepilot-agent/README.md) | AI Agent / Codex / Claude Code | 工具调用、权限网关、沙箱、人工审批、上下文压缩、检查点、子代理、trace、eval 门禁 |
+
+> 👉 **案例总览见 [cases/README.md](cases/README.md)**。读法很简单:不要背图,盯住「起始架构为什么合理」「哪个量化信号逼它升级」「新架构选择了什么又放弃了什么」。
 
 ### 🗺️ templates/ —— 真实系统的架构模板
 
@@ -144,13 +162,13 @@ awesome-architecture/
 ## 怎么用这个仓库
 
 **如果你是初学者 / 想转向架构思维:**
-按顺序读完 `tutorial/`,每读完一章,就去 `templates/` 里挑一个你感兴趣的系统,试着用刚学的框架去「读懂」它。
+按顺序读完 `tutorial/`,每读完一章,就去 `templates/` 里挑一个你感兴趣的系统,试着用刚学的框架去「读懂」它。读到 07 章以后,再进入 `cases/` 看完整项目推演。
 
 **如果你正要设计一个新系统:**
-先去 `tutorial/07` 学方法论,再去 `templates/` 里找最接近你场景的那张地图,把它当作起点而不是答案——照着它的「关键决策」和「常见误区」逐条问自己。
+先去 `tutorial/07` 学方法论,再去 `templates/` 里找最接近你场景的那张地图,把它当作起点而不是答案——照着它的「关键决策」和「常见误区」逐条问自己。如果你的场景接近第一批案例,直接对照 `cases/` 里的完整推演。
 
 **如果你在准备系统设计面试:**
-`templates/` 里的每个模板都覆盖了高频考点(超卖、Feed 扩散、消息时序、流式输出…),按统一格式组织,适合系统性复习。
+`templates/` 里的每个模板都覆盖了高频考点(超卖、Feed 扩散、消息时序、流式输出…),按统一格式组织,适合系统性复习。`cases/` 更适合练「从需求一路讲到取舍」的完整表达。
 
 **如果你是资深工程师 / 架构师:**
 直接看每个模板的「关键决策与权衡」和「演进路线」,这是最浓缩的部分。欢迎贡献你踩过的坑。

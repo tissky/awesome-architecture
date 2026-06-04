@@ -42,6 +42,26 @@ const zhTutorialCollab = [
   { text: '26 · 协作决策树:何时 vibe、何时 spec-first', link: '/tutorial/26-协作决策树何时vibe何时spec-first' },
 ]
 
+const zhCases = [
+  { text: '案例总览', link: '/cases/README' },
+  { text: '01 · StarArena:演唱会抢票系统', link: '/cases/stararena-ticketing/README' },
+  { text: '02 · PatchDesk:轻量工单 SaaS', link: '/cases/patchdesk-saas/README' },
+  { text: '03 · DocuMind:企业 RAG 知识库', link: '/cases/documind-rag/README' },
+  { text: '04 · SyncRoom:实时协同工作台', link: '/cases/syncroom-collaboration/README' },
+  { text: '05 · FeedStream:内容分发系统', link: '/cases/feedstream-content/README' },
+  { text: '06 · CodePilot:编码 Agent 平台', link: '/cases/codepilot-agent/README' },
+]
+
+const enCases = [
+  { text: 'Cases overview', link: '/en/cases/README' },
+  { text: '01 · StarArena: concert ticketing', link: '/en/cases/stararena-ticketing/README' },
+  { text: '02 · PatchDesk: ticketing SaaS', link: '/en/cases/patchdesk-saas/README' },
+  { text: '03 · DocuMind: enterprise RAG', link: '/en/cases/documind-rag/README' },
+  { text: '04 · SyncRoom: realtime collaboration', link: '/en/cases/syncroom-collaboration/README' },
+  { text: '05 · FeedStream: content distribution', link: '/en/cases/feedstream-content/README' },
+  { text: '06 · CodePilot: coding Agent', link: '/en/cases/codepilot-agent/README' },
+]
+
 const zhCommon = [
   { text: 'AI 对话产品', link: '/templates/ai-chat-product/README' },
   { text: '浏览器插件', link: '/templates/browser-extension/README' },
@@ -109,6 +129,7 @@ export default defineConfig({
           { text: '首页', link: '/' },
           { text: '教程', link: '/tutorial/README' },
           { text: '架构模板', link: '/templates/README' },
+          { text: '案例篇', link: '/cases/README' },
         ],
         sidebar: {
           '/tutorial/': [
@@ -122,11 +143,15 @@ export default defineConfig({
             { text: '🤖 AI 原生系统', items: zhAI },
             { text: '🦾 AI 编码 / 自治 Agent', items: zhAgent },
           ],
+          '/cases/': [
+            { text: '🧪 案例篇', items: zhCases },
+          ],
           '/': [
             { text: '📚 教程 · 入门篇', collapsed: false, items: zhTutorial },
             { text: '🚀 教程 · 进阶篇', collapsed: false, items: zhTutorialAdvanced },
             { text: '🎯 教程 · 实战篇', collapsed: false, items: zhTutorialPractice },
             { text: '🤝 教程 · AI 协同篇', collapsed: false, items: zhTutorialCollab },
+            { text: '🧪 案例篇', collapsed: false, items: zhCases },
             { text: '🗺️ 经典 / 通用系统', collapsed: true, items: zhCommon },
             { text: '🤖 AI 原生系统', collapsed: true, items: zhAI },
             { text: '🦾 AI 编码 / 自治 Agent', collapsed: true, items: zhAgent },
@@ -152,9 +177,13 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Tutorial', link: '/en/tutorial/README' },
+          { text: 'Cases', link: '/en/cases/README' },
           { text: 'GitHub', link: 'https://github.com/study8677/awesome-architecture' },
         ],
         sidebar: {
+          '/en/cases/': [
+            { text: '🧪 Cases', items: enCases },
+          ],
           '/en/': [
             {
               text: '📚 Tutorial · Foundations',
@@ -205,6 +234,11 @@ export default defineConfig({
                 { text: '25 · Eval-driven: bake "good enough" into architecture', link: '/en/tutorial/25-评测驱动把够好写进架构' },
                 { text: '26 · Collaboration decision tree: when to vibe, when to spec-first', link: '/en/tutorial/26-协作决策树何时vibe何时spec-first' },
               ],
+            },
+            {
+              text: '🧪 Cases',
+              collapsed: false,
+              items: enCases,
             },
             {
               text: '🗺️ Templates · Classic / General',

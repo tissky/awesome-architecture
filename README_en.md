@@ -42,7 +42,8 @@ That is **architectural thinking**. It's independent of language, of framework, 
 ```
 awesome-architecture/
 ├── tutorial/      📚 Tutorial  — systematically teaches you how to *think like an architect*
-└── templates/     🗺️ Templates — architecture maps of real systems; architecture only, no syntax
+├── templates/     🗺️ Templates — architecture maps of real systems; architecture only, no syntax
+└── cases/         🧪 Cases     — concrete products from zero to launch, then into real pressure
 ```
 
 ### 📚 tutorial/ — Become a sharper architect
@@ -95,6 +96,23 @@ Not "how to use framework X", but a transferable way of thinking: how to turn a 
 
 > 👉 **New here? Start with [tutorial/README.md](tutorial/README.md)** for the full learning path.
 
+### 🧪 cases/ — Turn architecture from answer into reasoning
+
+`cases/` is not more templates. It walks a concrete product from zero to launch, then into real pressure. It fills the final gap between `tutorial/` and `templates/`: templates tell you **what this class of system usually looks like**; cases show **why one concrete scenario forces these trade-offs**.
+
+The first batch of six core cases is complete:
+
+| Case | Capability area | What it drills |
+|---|---|---|
+| [01 · StarArena: concert ticketing](en/cases/stararena-ticketing/README.md) | Online ticketing / e-commerce / payment | Limited inventory, virtual waiting room, seat locking, payment state machine, reconciliation |
+| [02 · PatchDesk: lightweight ticketing SaaS](en/cases/patchdesk-saas/README.md) | Standard Web / SaaS backend | Modular monolith, tenant isolation, RBAC, Outbox, async notifications, search/report evolution |
+| [03 · DocuMind: enterprise RAG knowledge base](en/cases/documind-rag/README.md) | RAG / AI chat / vector database | Ingestion, chunking, hybrid retrieval, Graph RAG, reranking, citations, permissions, prompt injection, evals |
+| [04 · SyncRoom: realtime collaboration workspace](en/cases/syncroom-collaboration/README.md) | Realtime chat / collaborative docs / notifications | Long connections, server seq, offline catch-up, multi-device sync, OT / CRDT, presence, notification degradation |
+| [05 · FeedStream: content distribution](en/cases/feedstream-content/README.md) | Social feed / video / search | Hybrid fanout, top creator fanout, timeline inboxes, ranking, search indexes, transcoding, CDN, moderation recall |
+| [06 · CodePilot: coding Agent platform](en/cases/codepilot-agent/README.md) | AI Agent / Codex / Claude Code | Tool calls, permission gateway, sandboxing, human approval, context compaction, checkpoints, subagents, trace, eval gates |
+
+> 👉 **See [en/cases/README.md](en/cases/README.md)** for the case overview. The reading rule: do not memorize diagrams; watch why the starting architecture was reasonable, which quantified signal forced an upgrade, and what the new design chose and gave up.
+
 ### 🗺️ templates/ — Architecture maps of real systems
 
 Each template is an "architecture map". We **deliberately avoid discussing language or framework** — only: what problem this class of system solves, what parts it's made of, how data flows, how the key trade-offs are made, and where it dies at scale.
@@ -141,20 +159,20 @@ Each template is an "architecture map". We **deliberately avoid discussing langu
 
 > 👉 **Want to add your own template?** Follow the unified format in [templates/_TEMPLATE.md](templates/_TEMPLATE.md).
 
-> 📝 **Now fully bilingual** — all **26 tutorial chapters and 25 templates** are available in English. Use the language switch (top-right on the site), or browse `en/` in the repo.
+> 📝 **Now fully bilingual** — all **26 tutorial chapters, 25 templates, and the first 6 cases** are available in English. Use the language switch (top-right on the site), or browse `en/` in the repo.
 
 ---
 
 ## How to use this repo
 
 **If you're a beginner / shifting toward architectural thinking:**
-Read `tutorial/` in order. After each chapter, pick a system in `templates/` you find interesting and try to "read" it using the framework you just learned.
+Read `tutorial/` in order. After each chapter, pick a system in `templates/` you find interesting and try to "read" it using the framework you just learned. After chapter 07, start using `cases/` for complete product walkthroughs.
 
 **If you're about to design a new system:**
-Start with `tutorial/07` for the methodology, then find the map closest to your scenario in `templates/`. Treat it as a starting point, not an answer — walk through its "key decisions" and "common pitfalls" and ask yourself each one.
+Start with `tutorial/07` for the methodology, then find the map closest to your scenario in `templates/`. Treat it as a starting point, not an answer — walk through its "key decisions" and "common pitfalls" and ask yourself each one. If your scenario resembles one of the first-batch cases, compare against the full reasoning in `cases/`.
 
 **If you're prepping for system design interviews:**
-Every template covers high-frequency topics (overselling, feed fan-out, message ordering, streaming output…), all in a consistent format — great for systematic review.
+Every template covers high-frequency topics (overselling, feed fan-out, message ordering, streaming output…), all in a consistent format — great for systematic review. `cases/` is better for practicing a complete answer from requirements to trade-offs.
 
 **If you're a senior engineer / architect:**
 Jump straight to each template's "Key Decisions & Trade-offs" and "Evolution Path" — the most concentrated parts. PRs sharing the scars you've earned are welcome.
